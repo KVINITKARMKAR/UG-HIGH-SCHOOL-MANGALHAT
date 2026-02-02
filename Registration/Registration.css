@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: #0f172a;
+    color: #ffffff;
+}
+
+.site-header img {
+    border-radius: 50%;
+}
+
+.site-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    background: #1e293b;
+    padding: 10px;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ================= login SECTION ================= */
+/* ===== POPUP BACKGROUND ===== */
+/* ===== MODAL BACKDROP ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75); /* dark bluish overlay */
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+/* =========================
+   STUDENT LOGIN DESIGN
+   ========================= */
+
+.student-login-section {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.student-login-section h1 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* login form box */
+.student-login-form {
+    width: 320px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #f4f8ff;
+    border-radius: 10px;
+}
+
+/* labels */
+.student-login-form label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #003366;
+}
+
+/* inputs */
+.student-login-form input[type="text"],
+.student-login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+/* login button */
+.student-login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #004aad;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.student-login-form input[type="submit"]:hover {
+    background: #003080;
+}
+
+/* register text */
+.register-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}

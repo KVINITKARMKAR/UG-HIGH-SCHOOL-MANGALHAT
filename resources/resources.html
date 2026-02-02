@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College website</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div>
+        <!-- Header (college name) -->
+        <header class="site-header">
+
+            <!-- Navigation bar -->
+            <nav class="navbar">
+                <a href="../index.html">Home</a> |
+                <a href="#syllabus">syllabus</a> |
+                <a href="#E-Book">E-Book</a> |
+                <a href="resources.html">Resources</a> |
+                <a href="#Videos">Videos</a> 
+                <!-- <a href="#contact">Contact</a>  -->
+            </nav>
+        </header>
+    </div>
+    <section id = "syllabus">
+        <center>
+        <h1>Syllabus</h1>
+    <form id="syllabusForm">
+        <div>
+        <label for="class">Class:</label><br>
+        <select id="class" name="class" required>
+            <option value="" disabled selected>Select your class</option>
+            <option value="12th">12th</option>
+            <option value="11th">11th</option>
+            <option value="10th">10th</option>
+            <option value="9th">9th</option>
+        </select><br><br>
+
+        <label for="stream">Stream:</label><br>
+        <select id="stream" name="stream" required>
+            <option value="" disabled selected>Select your stream</option>
+            <option value="science">Science</option>
+            <option value="commerce">Commerce</option>
+            <option value="arts">Arts</option>
+            <option value="Mixed">Mixed</option>
+        </select><br><br>
+
+        <input type="submit" value="Download">
+    </form>
+</div>
+        </center>
+    </section>
+    <section id="E-Book">
+        <center>
+        <h1>E-Book</h1>
+        
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Stream</th>
+                <th>English</th>
+                <th>Hindi</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>class 12th</td>
+                <td><a>Science</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a>500</a></td>
+            </tr>
+            <tr>
+                <td>class 11th</td>
+                <td><a>Science</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a>500</a></td>
+            </tr>
+            <tr>
+                <td>class 10th</td>
+                <td><a>Mixed</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a>500</a></td>
+            </tr>
+            <tr>
+                <td>class 9th</td>
+                <td><a>Mixed</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a>500</a></td>
+            </tr>
+            <tr>
+                <td>class 8th</td>
+                <td><a>Mixed</a></td>
+                <td><a>Unavailable</a></td>
+                <td><a href="https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing">Available</a></td>
+                <td><a>500</a></td>
+            </tr>
+        </table>
+        </center>
+    </section>
+    <section id="Videos">
+        <center>
+        <h2>Videos lessons</h2>
+        Science Videos:<br>
+        <iframe width="760" height="430" src="https://www.youtube.com/embed/MiUHjLxm3V0" title="The Ridiculous Engineering Of The World&#39;s Most Important Machine" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </center>
+
+    </section>
+    <script>
+document.getElementById("syllabusForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // page reload stop
+
+    const selectedClass = document.getElementById("class").value;
+    const selectedStream = document.getElementById("stream").value;
+
+    // PDF mapping (class + stream wise)
+    const syllabusPDFs = {
+        "12th": {
+            "science": "https://drive.google.com/uc?export=download&id=17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE",
+            "arts": "https://drive.google.com/uc?export=download&id=ARTS_PDF_ID",
+            "commerce": "https://drive.google.com/uc?export=download&id=COMMERCE_PDF_ID"
+        },
+        "11th": {
+            "science": "https://drive.google.com/uc?export=download&id=SCIENCE11_PDF_ID",
+            "arts": "https://drive.google.com/uc?export=download&id=ARTS11_PDF_ID"
+        },
+        "10th": {
+            "Mixed": "https://drive.google.com/uc?export=download&id=CLASS10_PDF_ID"
+        },
+        "9th": {
+            "Mixed": "https://drive.google.com/uc?export=download&id=CLASS9_PDF_ID"
+        }
+    };
+
+    // validation
+    if (!syllabusPDFs[selectedClass] || !syllabusPDFs[selectedClass][selectedStream]) {
+        alert("Is class / stream ka syllabus available nahi hai.");
+        return;
+    }
+
+    // download trigger
+    window.location.href = syllabusPDFs[selectedClass][selectedStream];
+});
+</script>
+
+</body>
+</html>
+<!-- https://drive.google.com/file/d/17kNpbet1NzzQmdqFaF4Z7VWHCyELb1dE/view?usp=sharing -->
